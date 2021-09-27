@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url(../imagenes/background.jpg);
+    background-repeat: round;
+    background-size: auto;
+}
+header{
+    width: 100%;
+    height: 78px;
+    background-color:coral;
+    position: fixed;
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.img-logo{
+    height: 80px;
+    margin-left: 5%;
+}
+.menu{
+    /* width: auto; */
+    margin-top: 19px;
+    margin-right: 5%;
+}
+.menu ul{
+    display: flex;
+    list-style: none;
+}
+.menu li a{
+text-decoration: none;
+color: orangered;
+padding: 20px;
+}
+.menu ul li a:hover{
+ color: indianred;
+ background-color: crimson;
+}
+main{
+    /* Especifica el tipo de método de posicionamiento utilizado para un elemento 
+    static, absolute, fixed, relative*/
+    position: relative;
+    top: 78px;
+}
+.gallery-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* Unidad vh son medidas relativasde acuerdo al viewport */
+    height: 65vh;
+    background-image: url(../imagenes/background2.jpg);
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+}
+div.gallery-container div.gallery-item{
+/* abreviatura para flex-grow, flex-shrink, flex-basis 
+flex-grow: 0;
+flex-shrink:1
+flex-basis:auto;
+Hace que el elemento flexible sea flexible y establece la base flexible en 0*/
+    flex: 1;
+    height: 100%;
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    transition: flex 0.5s ease-in-out;
+}
+div.gallery-item span{
+    color: orangered;
+    font-weight: 600;
+font-size: 20px;
+padding: 20px 8px;
+background-color: lightsalmon;
+transition: opacity 0.8s ease;
+border-radius: 5px;
+border-style: groove;
+border-color: crimson;
+}
+div.gallery-container div.gallery-item:hover span{
+opacity: 0;
+}
+.gallery-container .gallery-item:hover{
+/* flex grow - indica el factor de crecimineto del item repecto al otro */
+    flex: 2;
+}
+.gallery-container .gallery-item.g-item-1{
+background-image: url(../imagenes/crash.png);
+background-size: 80%;
+}
+.gallery-container .gallery-item.g-item-2{
+    background-image: url(../imagenes/cortex.png);
+    background-size: 80%;
+}
+.gallery-container .gallery-item.g-item-3{
+    background-image: url(../imagenes/coco.png);
+    background-size: 70%;
+}
+.gallery-container .gallery-item.g-item-4{
+    background-image: url(../imagenes/ngin.png);
+    background-size: 80%;
+}
+.gallery-container .gallery-item.g-item-5{
+    background-image: url(../imagenes/pasadena.png);
+    background-size: 80%;
+}
+.gallery-container .gallery-item.g-item-6{
+background-image: url(../imagenes/Nina.png);
+background-size: 80%;
+}
+.contenthistory h2{
+    margin: 200px 0px 80px 0px;
+    font-size: 1.5cm;
+    color: crimson;
+    font-weight: 900;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    -webkit-text-stroke: 0.8px black;
+}
+.container{
+    display: flex;
+    width: 100%;
+    height: 500px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.container .card{
+    width: 400px;
+    height: 350px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+    overflow: hidden;
+    transition: all 0.25s;
+}
+.container .card:hover{
+    transform: translateY(-15px);
+    box-shadow: rgba(0,0,0,0.2);
+}
+.container .card img {
+    width: 220px;
+    height: 100px;
+}
+.container .card p{
+    padding: 0 1rem;
+    font-size: 15px;
+    font-weight: 300;
+    color: maroon;
+    -webkit-text-stroke: 0.3px black;
+}
+.sectiongall h2{
+    margin: 50px 0px 80px 0px;
+    font-size: 1.5cm;
+    color: crimson;
+    font-weight: 900;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    -webkit-text-stroke: 0.8px black;
+}
+.containergall{
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+}
+.containergall img{
+    width: 350px;
+    height: 350px;
+    margin-top: 50px;
+    border-radius: 8px;
+    border-style: groove;
+    border-color: crimson;
+    transition: all 0.25s;
+}
+.containergall img:hover{
+    transform: translateY(-15px);
+}
+.sectionvid h2{
+    margin: 50px 0px 80px 0px;
+    font-size: 1.5cm;
+    color: crimson;
+    font-weight: 900;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    -webkit-text-stroke: 0.8px black;
+}
+.containervid {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+}
+.containervid iframe{
+    margin-top: 20px;
+    border-radius: 8px;
+}
+footer {
+    background-image: url(../imagenes/background4.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 10px;
+    color: orangered;
+    -webkit-text-stroke: 0.2px black;
+}
+.containerfoot{
+    display: flex;
+    justify-content: space-between;
+    align-items: space-between;
+    flex-wrap: wrap;
+    margin: 50px;
+}
+.cardf .about{
+ position: relative;
+ top: 70px;
+ font-weight: 400;
+ font-size: 20px;
+ line-height: 50px;
+ background-color: palegreen;
+ border-radius: 8px;
+ border-style: groove;
+ border-color: salmon;
+ padding: 5px 5px;
+ -webkit-text-stroke: 0.5px black;
+}
+.cardf h3{
+    font-size: 16px;
+    color: crimson;
+    -webkit-text-stroke: 0.5px rgb(58, 13, 28);
+    background-color: darkorchid;
+    text-align: center;
+    border-radius: 8px;
+    border-style: groove;
+}
+.cardf{
+    width: 400px;
+    height: 350px;
+}
+.cardf span{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cardf img{
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+}
+.copyright{
+    text-align: center;
+    border-radius: 8px;
+    border-style: groove;
+    margin-top: 7%;
+}
